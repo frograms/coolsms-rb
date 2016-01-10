@@ -1,0 +1,7 @@
+Coolsms.configure do |cool|
+  cool.api_key = 'api_key'
+  cool.api_secret = 'api_secret'
+  cool.default_from = 'default_sender_number'
+end
+
+COOLSMS_TEST_RECEIVERS = ['test_receiver_number_1', 'test_receiver_number_2']
