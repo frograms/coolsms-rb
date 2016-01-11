@@ -1,1 +1,1 @@
-requrie 'coolsms'
+require 'coolsms'

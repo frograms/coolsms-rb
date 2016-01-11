@@ -45,10 +45,14 @@ module Coolsms
         res = message.delete(:response) if message.is_a?(Hash) && message[:response]
 
         case res
-        when Faraday::Response, Faraday::env then
-          self.status = message.status
-          self.headers = message.headers
-          self.body = message.body
+        when Faraday::Response then
+          self.status = res.status
+          self.headers = res.headers
+          self.body = res.body
+        when Faraday::Env then
+          self.status = res.status
+          self.headers = res.response_headers
+          self.body = res.body
         when Faraday::Error::ClientError then
           self.status = res[:status]
           self.headers = res[:headers]

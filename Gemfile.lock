@@ -1,13 +1,14 @@
 PATH
   remote: .
   specs:
-    hop (0.1.0)
+    coolsms-rb (0.1.0)
       activesupport (~> 3.2)
       awesome_print
       coaster (~> 0.0.1)
       faraday (~> 0.9.1)
       faraday_middleware (~> 0.10.0)
       oj (~> 2.9)
+      tzinfo (~> 0.3.0)
 
 GEM
   remote: http://rubygems.org/
@@ -37,7 +38,7 @@ GEM
       metaclass (~> 0.0.1)
     multi_json (1.11.2)
     multipart-post (2.0.0)
-    oj (2.14.3)
+    oj (2.14.0)
     pry (0.10.3)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -56,13 +57,14 @@ GEM
     shoulda-matchers (2.8.0)
       activesupport (>= 3.0.0)
     slop (3.6.0)
+    tzinfo (0.3.46)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   bundler (~> 1.0)
-  hop!
+  coolsms-rb!
   minitest (~> 5.0)
   mocha (~> 1.0)
   pry (~> 0.8)
@@ -72,4 +74,4 @@ DEPENDENCIES
   shoulda-context (~> 1.0)
 
 BUNDLED WITH
-   1.10.6
+   1.11.2

@@ -16,7 +16,6 @@ module Coolsms
 
       def conn
         @conn ||= Faraday.new(url: url) do |conn|
-          conn.use Coolsms::RestApi::FaradayErrorHandler
           conn.response :json
           conn.use :instrumentation
           conn.use Faraday::Response::RaiseError

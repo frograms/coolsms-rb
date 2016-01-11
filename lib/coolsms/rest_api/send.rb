@@ -24,6 +24,18 @@ module Coolsms
 
       attr_accessor *(NECESSARY_PARAMS + OPTIONAL_PARAMS)
 
+      class << self
+        def conn
+          @conn ||= Faraday.new(url: url) do |conn|
+            conn.use Coolsms::RestApi::FaradayErrorHandler
+            conn.response :json
+            conn.use :instrumentation
+            conn.use Faraday::Response::RaiseError
+            conn.adapter Faraday.default_adapter
+          end
+        end
+      end
+
       def initialize(text, from, *to)
         self.text = text
         self.from = Coolsms.number_strip(from)
@@ -33,10 +45,10 @@ module Coolsms
       def to_params
         params = auth_params
         NECESSARY_PARAMS.each do |param|
-          params = params.update(param => send(param))
+          params.update(param => send(param))
         end
         OPTIONAL_PARAMS.each do |param|
-          params = params.update(param => send(param)) if send(param)
+          params.update(param => send(param)) if send(param)
         end
 
         to = Array(params[:to]).flatten
