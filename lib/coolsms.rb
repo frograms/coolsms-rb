@@ -21,6 +21,8 @@ module Coolsms
   mattr_accessor :logger
   @@logger = Logger.new('log/sms.log')
 
+  mattr_accessor :faraday_adapter
+
   NUMBER_STRIP_REGEX = /[^\d]/
   TIMEZONE = ActiveSupport::TimeZone.new('Seoul')
 

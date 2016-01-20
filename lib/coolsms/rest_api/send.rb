@@ -31,7 +31,7 @@ module Coolsms
             conn.response :json
             conn.use :instrumentation
             conn.use Faraday::Response::RaiseError
-            conn.adapter Faraday.default_adapter
+            conn.adapter Coolsms.faraday_adapter || Faraday.default_adapter
           end
         end
       end
