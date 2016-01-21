@@ -1,6 +1,7 @@
 ENV['DEBUG'] = 'true'
 
 require 'minitest'
+require 'forgery'
 require 'pry'
 
 require 'rubygems'

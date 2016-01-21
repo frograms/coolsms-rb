@@ -34,4 +34,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'mocha', '~> 1.0'
   s.add_development_dependency 'shoulda', '~> 3.0'
   s.add_development_dependency 'shoulda-context', '~> 1.0'
+  s.add_development_dependency 'forgery', '~> 0.6'
 end

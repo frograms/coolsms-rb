@@ -32,5 +32,16 @@ module Coolsms
       sent = msg.group.first
       assert_equal '58', sent.result_code
     end
+
+    def test_long_single
+      msg = Coolsms::Message.new
+      msg.text = Forgery(:lorem_ipsum).words(50)
+      result = msg.send(COOLSMS_TEST_RECEIVERS.first)
+      assert_equal 1, result.body['success_count']
+      sleep(10)
+      sent = msg.group.first
+      assert_equal '00', sent.result_code
+      assert_equal 'LMS', sent.type
+    end
   end
 end

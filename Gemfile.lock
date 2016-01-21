@@ -30,6 +30,7 @@ GEM
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.10.0)
       faraday (>= 0.7.4, < 0.10)
+    forgery (0.6.0)
     i18n (0.7.0)
     metaclass (0.0.4)
     method_source (0.8.2)
@@ -65,6 +66,7 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 1.0)
   coolsms-rb!
+  forgery (~> 0.6)
   minitest (~> 5.0)
   mocha (~> 1.0)
   pry (~> 0.8)

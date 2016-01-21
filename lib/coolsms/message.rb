@@ -33,7 +33,12 @@ module Coolsms
     def send(*to)
       raise EmptyMessage if text.blank?
       raise AlreadySent if @send_api || retrieved
-      @send_api = Coolsms::RestApi::Send.new(self[:text], from ,to)
+      if self[:text].bytes.size <= 90
+        @send_api = Coolsms::RestApi::Send.new(self[:text], from ,to)
+      else
+        @send_api = Coolsms::RestApi::Send.new(self[:text], from, to)
+        @send_api.type = :LMS
+      end
       @send_response = @send_api.call
       attributes[:group_id] = send_response.body['group_id']
       @send_response
