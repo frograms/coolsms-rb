@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'activesupport', '~> 3.2'
   s.add_dependency 'faraday_middleware', '~> 0.10.0'
   s.add_dependency 'awesome_print'
-  s.add_dependency 'coaster', '~> 0.0.1'
+  s.add_dependency 'coaster', '~> 0.1.0'
   # s.add_dependency "jquery-rails"
 
   s.add_development_dependency 'bundler', '~> 1.0'
