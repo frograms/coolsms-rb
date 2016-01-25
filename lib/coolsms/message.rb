@@ -31,7 +31,7 @@ module Coolsms
     end
 
     def send(*to)
-      raise EmptyMessage if text.blank?
+      raise EmptyMessage if @attributes[:text].blank?
       raise AlreadySent if @send_api || retrieved
       if self[:text].bytes.size <= 90
         @send_api = Coolsms::RestApi::Send.new(self[:text], from ,to)
