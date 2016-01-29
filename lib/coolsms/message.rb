@@ -37,6 +37,7 @@ module Coolsms
         @send_api = Coolsms::RestApi::Send.new(self[:text], from ,to)
       else
         @send_api = Coolsms::RestApi::Send.new(self[:text], from, to)
+        @send_api.subject = @attributes[:subject]
         @send_api.type = :LMS
       end
       @send_response = @send_api.call

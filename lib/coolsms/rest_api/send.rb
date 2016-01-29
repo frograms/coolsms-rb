@@ -53,8 +53,8 @@ module Coolsms
 
         to = Array(params[:to]).flatten
         to = to.map do |num|
-          splited = num.split(',')
-          splited.map { |num2| Coolsms.number_strip(num2) }
+          split= num.split(',')
+          split.map { |num2| Coolsms.number_strip(num2) }
         end.flatten.uniq.join(',')
         params[:to] = to
 

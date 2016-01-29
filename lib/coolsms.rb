@@ -37,8 +37,9 @@ module Coolsms
 
     def message(text, *to)
       options = to.extract_options!
-      from = options[:from] || default_from
-      msg = Coolsms::Message.new(text: text, from: from)
+      options[:text] = text
+      options[:from] ||= default_from
+      msg = Coolsms::Message.new(options)
       if block_given?
         yield(msg)
       else
