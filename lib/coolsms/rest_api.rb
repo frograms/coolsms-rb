@@ -1,4 +1,5 @@
 require 'active_support/core_ext/object/to_query'
+require 'securerandom'
 
 module Coolsms
   class RestApi
