@@ -19,8 +19,8 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'faraday', '~> 0.15'
   s.add_dependency 'oj', '~> 2.9'
-  s.add_dependency 'tzinfo', '>= 0.3.0', '<= 1.2.2'
-  s.add_dependency 'activesupport', '>= 3.2', '< 5.0.0'
+  s.add_dependency 'tzinfo', '>= 0.3.0'
+  s.add_dependency 'activesupport', '>= 3.2'
   s.add_dependency 'faraday_middleware', '~> 0.10'
   s.add_dependency 'awesome_print', '~> 1.7'
   s.add_dependency 'coaster', '~> 0.5'
