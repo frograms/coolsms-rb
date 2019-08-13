@@ -17,22 +17,22 @@ Gem::Specification.new do |s|
   s.files = Dir['{app,config,db,lib}/**/*'] + %w(LICENSE Rakefile README.md)
   s.test_files = Dir['test/**/*']
 
-  s.add_dependency 'faraday', '~> 0.15'
-  s.add_dependency 'oj', '~> 2.9'
-  s.add_dependency 'tzinfo', '>= 0.3.0'
-  s.add_dependency 'activesupport', '>= 3.2'
-  s.add_dependency 'faraday_middleware', '~> 0.10'
-  s.add_dependency 'awesome_print', '~> 1.7'
-  s.add_dependency 'coaster', '~> 0.5'
+  s.add_dependency 'faraday', '>= 0.9.1'
+  s.add_dependency 'oj', '>= 2.9'
+  s.add_dependency 'tzinfo', '>= 0.3.0', '<= 1.2.2'
+  s.add_dependency 'activesupport', '>= 4.1.11'
+  s.add_dependency 'faraday_middleware', '>= 0.10'
+  s.add_dependency 'awesome_print', '>= 1.7'
+  s.add_dependency 'coaster', '>= 0.1'
   # s.add_dependency "jquery-rails"
 
-  s.add_development_dependency 'bundler', '~> 1.12'
-  s.add_development_dependency 'pry', '~> 0.8'
-  s.add_development_dependency 'pry-stack_explorer', '~> 0.4'
-  s.add_development_dependency 'pry-byebug', '~> 3.0'
-  s.add_development_dependency 'minitest', '~> 5.0'
-  s.add_development_dependency 'mocha', '~> 1.0'
-  s.add_development_dependency 'shoulda', '~> 3.0'
-  s.add_development_dependency 'shoulda-context', '~> 1.0'
-  s.add_development_dependency 'forgery', '~> 0.7'
+  s.add_development_dependency 'bundler', '>= 1.12'
+  s.add_development_dependency 'pry', '>= 0.8'
+  s.add_development_dependency 'pry-stack_explorer', '>= 0.4'
+  s.add_development_dependency 'pry-byebug', '>= 3.0'
+  s.add_development_dependency 'minitest', '>= 5.0'
+  s.add_development_dependency 'mocha', '>= 1.0'
+  s.add_development_dependency 'shoulda', '>= 3.0'
+  s.add_development_dependency 'shoulda-context', '>= 1.0'
+  s.add_development_dependency 'forgery', '>= 0.6'
 end
