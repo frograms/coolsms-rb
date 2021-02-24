@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'faraday', '>= 0.9.1'
   s.add_dependency 'oj', '>= 2.9'
-  s.add_dependency 'tzinfo', '>= 0.3.0', '<= 1.2.2'
+  s.add_dependency 'tzinfo'
   s.add_dependency 'activesupport', '>= 4.1.11'
   s.add_dependency 'faraday_middleware', '>= 0.10'
   s.add_dependency 'awesome_print', '>= 1.7'
