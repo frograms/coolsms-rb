@@ -5,7 +5,7 @@ PATH
       activesupport
       awesome_print
       coaster
-      faraday
+      faraday (>= 2.0)
       oj
       tzinfo
 

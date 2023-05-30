@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.files = Dir['{app,config,db,lib}/**/*'] + %w(LICENSE Rakefile README.md)
   s.test_files = Dir['test/**/*']
 
-  s.add_dependency 'faraday'
+  s.add_dependency 'faraday', '>= 2.0'
   s.add_dependency 'oj'
   s.add_dependency 'tzinfo'
   s.add_dependency 'activesupport'
