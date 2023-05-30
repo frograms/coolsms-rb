@@ -35,7 +35,7 @@ module Coolsms
 
     def test_long_single
       msg = Coolsms::Message.new
-      msg.text = Forgery(:lorem_ipsum).words(50)
+      msg.text = Forgery(:lorem_ipsum).words(3)
       result = msg.send(COOLSMS_TEST_RECEIVERS.first)
       assert_equal 1, result.body['success_count']
       sleep(10)

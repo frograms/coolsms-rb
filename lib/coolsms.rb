@@ -7,7 +7,6 @@ require 'active_support/core_ext/array/extract_options'
 require 'active_support/values/time_zone'
 require 'oj'
 require 'faraday'
-require 'faraday_middleware'
 require 'coaster'
 require 'awesome_print'
 

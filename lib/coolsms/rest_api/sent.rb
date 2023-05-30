@@ -12,8 +12,7 @@ module Coolsms
         :mid,
         :gid
     ]
-
-    attr_accessor *OPTIONAL_PARAMS
+    attr_accessor(*OPTIONAL_PARAMS)
 
     def to_params
       params = auth_params

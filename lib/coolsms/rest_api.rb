@@ -19,7 +19,6 @@ module Coolsms
         @conn ||= Faraday.new(url: url) do |conn|
           conn.response :json
           conn.use :instrumentation
-          conn.use Faraday::Response::RaiseError
           conn.adapter Coolsms.faraday_adapter || Faraday.default_adapter
         end
       end
@@ -76,7 +75,6 @@ module Coolsms
 end
 
 require 'coolsms/rest_api/errors'
-require 'coolsms/rest_api/faraday_json_parser'
 require 'coolsms/rest_api/faraday_error_handler'
 require 'coolsms/rest_api/send'
 require 'coolsms/rest_api/sent'

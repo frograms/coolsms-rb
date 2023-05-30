@@ -1,8 +1,12 @@
+require 'active_support/notifications'
+
 module Coolsms
   class RestApi
     # http://www.coolsms.co.kr/SMS_API
     class Send < RestApi
       NECESSARY_PARAMS = [:from, :to, :text]
+      attr_accessor(*NECESSARY_PARAMS)
+
       OPTIONAL_PARAMS = [
         :type,
         :image, :image_encoding,
@@ -21,16 +25,14 @@ module Coolsms
         :sdk_version,
         :app_version
       ]
-
-      attr_accessor *(NECESSARY_PARAMS + OPTIONAL_PARAMS)
+      attr_accessor(*OPTIONAL_PARAMS)
 
       class << self
         def conn
           @conn ||= Faraday.new(url: url) do |conn|
             conn.use Coolsms::RestApi::FaradayErrorHandler
+            conn.request :instrumentation
             conn.response :json
-            conn.use :instrumentation
-            conn.use Faraday::Response::RaiseError
             conn.adapter Coolsms.faraday_adapter || Faraday.default_adapter
           end
         end

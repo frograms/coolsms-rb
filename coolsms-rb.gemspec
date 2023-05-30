@@ -21,10 +21,8 @@ Gem::Specification.new do |s|
   s.add_dependency 'oj'
   s.add_dependency 'tzinfo'
   s.add_dependency 'activesupport'
-  s.add_dependency 'faraday_middleware'
   s.add_dependency 'awesome_print'
   s.add_dependency 'coaster'
-  # s.add_dependency "jquery-rails"
 
   s.add_development_dependency 'bundler', '>= 1.12'
   s.add_development_dependency 'pry', '>= 0.8'
@@ -35,4 +33,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'shoulda', '>= 3.0'
   s.add_development_dependency 'shoulda-context', '>= 1.0'
   s.add_development_dependency 'forgery', '>= 0.6'
+  s.add_development_dependency 'vcr'
 end
