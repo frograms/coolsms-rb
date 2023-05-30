@@ -18,7 +18,7 @@ module Coolsms
       def conn
         @conn ||= Faraday.new(url: url) do |conn|
           conn.response :json
-          conn.use :instrumentation
+          conn.request :instrumentation
           conn.adapter Coolsms.faraday_adapter || Faraday.default_adapter
         end
       end
